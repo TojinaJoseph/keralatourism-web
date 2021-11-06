@@ -26,13 +26,13 @@
                 <a class="navbar-brand" href="index.html">Home</a>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="login.html">Signin</a>
+                    <a class="nav-link disabled" aria-current="page" href="login.html">Signin</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link active" href="signup.html">Signup</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" href="district.html">Districts</a>
+                    <a class="nav-link disabled" href="district.html">Districts</a>
                   </li> 
                   <!-- <li class="nav-item">
                     <a class="nav-link disabled">Districts</a>
@@ -47,22 +47,22 @@
           </nav>
     <!-- navbar end -->
     <!-- form -->
-     <form action="district.html" class="login">
+     <form action="district.html" class="login" onsubmit="return validate()">
             <h4>login</h4>
             <br>
             <div class="login-cont">
                 <!-- <label>username</label> -->
                 <i class="fas fa-user"></i>
-                <input type="text" placeholder="username">
+                <input type="text" placeholder="username" id="user">
             </div>
             <div class="login-cont">
                 <!-- <label>password</label> -->
                 <i class="fas fa-lock"></i>
-                <input type="text" placeholder="password">
+                <input type="password" placeholder="password" id="pwd">
             </div>
               <!-- <div class="login-cont"> -->
-                
-                <input type="button" class="btn" value="signIn">
+                <button class="btn" id="submit">signIn</button>
+                <!-- <input type="button" class="btn" value="signIn" id="submit"> -->
                 <!-- </div> -->
             
                 
@@ -76,6 +76,6 @@
 <!-- form ends -->
 
 
-    
+  <script src="script.js"></script>  
 </body>
 </html>

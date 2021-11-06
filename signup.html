@@ -26,10 +26,10 @@
                         <a class="nav-link active" aria-current="page" href="login.html">Signin</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link active" href="signup.html">Signup</a>
+                        <a class="nav-link disabled" href="signup.html">signup</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link active" href="district.html">Districts</a>
+                        <a class="nav-link disabled" href="district.html">Districts</a>
                       </li> 
                       <!-- <li class="nav-item">
                         <a class="nav-link disabled">Districts</a>
@@ -43,46 +43,46 @@
                 </div>
               </nav>
      <!-- form -->
-     <form action="#" class="signup">
+     <form action="district.html" class="signup" onsubmit="return validatesignup()">
         <h3>sign up</h3>
         
         <div class="signup-cont">
             <!-- <label>username</label> -->
             <i class="fas fa-user"></i>
-            <input type="text" placeholder="username">
+            <input type="text" placeholder="username" id="username">
         </div>
         <div class="signup-cont">
             <!-- <label>emailaddress</label>
             <br> -->
             <i class="fas fa-envelope"></i>
-            <input type="email" placeholder="@gmail.com">
+            <input type="email" placeholder="@gmail.com" id="email">
             <!-- <br>
             <label>phone number</label>
             <br> -->
         </div>
         <div class="signup-cont">
             <i class="fas fa-phone-square"></i>
-            <input type="number" placeholder="phonenumber">
+            <input type="number" placeholder="phonenumber" id="phno">
             <!-- <br>
             <label>password</label>
             <br> -->
           </div>
           <div class="signup-cont">
               <i class="fas fa-lock"></i>
-            <input type="text" placeholder="password">
+            <input type="password" placeholder="password" id="pass">
             <!-- <br>
             <label>retype password</label>
             <br> -->
           </div>
           <div class="signup-cont">
               <i class="fas fa-lock"></i>
-            <input type="text" placeholder="re-enter password">
+            <input type="text" placeholder="re-enter password" id="pass">
             <!-- <br> -->
           </div>
             <!-- <div class="signup-cont"> -->
             <!-- <br> -->
-            <!-- <button id="signup-button">sign up</button> -->
-            <input type="button" class="btn" value="signUp">
+            <button class="btn" id="submit">sign up</button>
+            <!-- <input type="button" class="btn" value="signUp">  -->
             <!-- </div>
             <br> -->
             <div class="signup-cont">
@@ -93,6 +93,6 @@
       
     </form>
 <!-- form ends -->
-
+<script src="script2.js"></script>
 </body>
 </html>
