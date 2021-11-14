@@ -127,17 +127,19 @@ function validatesignup(){
              indicator.style.display = "flex";
              if(pass.value.length <=3 && (pass.value.match(regExpWeak) || pass.value.match(regExpMedium) || pass.value.match(regExpStrong)))no=1;
              if(pass.value.length >=6 && ((pass.value.match(regExpWeak) && pass.value.match(regExpMedium) || pass.value.match(regExpMedium) && pass.value.match(regExpStrong)) || pass.value.match(regExpWeak) && pass.value.match(regExpStrong)))no=2; 
-             if(pass.value.length >=6 && ((pass.value.match(regExpWeak) && pass.value.match(regExpMedium) && pass.value.match(regExpStrong))))no=3;
+             if(pass.value.length >=8 && ((pass.value.match(regExpWeak) && pass.value.match(regExpMedium) && pass.value.match(regExpStrong))))no=3;
              if (no==1){
                 weak.classList.add("active");
                 text.style.display="block";
                 text.textContent="your password is too weak";
                 text.classList.add("weak");
+                return false;
                  }
              if (no==2){
                medium.classList.add("active");
                text.textContent = "your password is medium";
-               text.classList.add("medium");   
+               text.classList.add("medium"); 
+               return false;  
              } else {
                 medium.classList.remove("active");
                 text.classList.remove("medium");  
