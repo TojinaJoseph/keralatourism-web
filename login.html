@@ -50,16 +50,19 @@
      <form action="district.html" class="login" onsubmit="return validate()">
             <h4>login</h4>
             <br>
-            <div class="login-cont">
+            <div class="login-cont" id="usernl">
                 <!-- <label>username</label> -->
                 <i class="fas fa-user"></i>
-                <input type="text" placeholder="username" id="user">
+                <input type="text" placeholder="username" id="user" onkeyup="removeuserlog()">
+                
             </div>
-            <div class="login-cont">
+            <p id="userr"></p>
+            <div class="login-cont" id="passwl">
                 <!-- <label>password</label> -->
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="password" id="pwd">
+                <input type="password" placeholder="password" id="pwd" onkeyup=" removepasslog()">
             </div>
+            <p id="passerr"></p>
               <!-- <div class="login-cont"> -->
                 <button class="btn" id="submit">signIn</button>
                 <!-- <input type="button" class="btn" value="signIn" id="submit"> -->

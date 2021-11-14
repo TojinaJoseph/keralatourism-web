@@ -103,21 +103,41 @@
     text-decoration: none;
     color: lime; 
 }
-/* .signup{
-    float: right;
-    border: 2px solid black;
-    background-color: rgba(0,0,0,.6);
-    height: 28em;
-    margin-top: 100px;
-    margin-right: 400px;
-    margin-bottom: 40px;
-    padding: 30px;
-    /* text-align: center; */
-    /* color: white;
 
+#userr{
+    color: red;
     
 }
-.signup h3{
+#passerr{
+    color: red;
+    
+}
+#passerp{
+    color: yellowgreen;
+    font-size: 15px;
+}
+#useerrp{
+    color: yellowgreen;
+    font-size: 15px;  
+}
+#emailerrp{
+    color: yellowgreen;
+    font-size: 15px;
+   /* margin-right: 170px; */
+}
+#phoneerrp{
+    color: yellowgreen;
+    font-size: 15px;
+   /* margin-right: 200px; */
+}
+#repasserrp{
+    color: yellowgreen;
+    font-size: 15px;
+}
+
+
+
+/* .signup h3{
     text-align: center;
 }
 .signup input{
@@ -140,21 +160,12 @@
 .signup-misc a{
     text-decoration: none;
     color: lime;
-}  */
-.signup{
+}  */ 
+form.signup{
     width: 300px;
     position: absolute;
     top: 280px;
     left: 50%;
-    /* float: right; */
-     /* border: 2px solid black;
-   
-    height: 21em; */
-    /* margin-top: 100px;
-    margin-right: 400px;
-    margin-bottom: 50px; */
-    /* padding: 30px;  */
-    text-align: center;
     color: white;
     transform: translate(-50%,-50%);
     background-color: rgba(0,0,0,.6);
@@ -177,7 +188,7 @@
 
 
 }
-.signup-cont input{
+.signupcont input{
     border: none;
     outline: none;
     background: none;
@@ -185,18 +196,8 @@
     font-size: 18px;
     width: 80%;
     float: left;
-     margin: 0 10px;
-   
-    /* height: 1.5em; */
+    margin: 0 10px;
 }
-/* .login #login-button{
-    width: 100%; 
-    height: 1.8em;
-    color: white;
-    background-color: dodgerblue;
-    border: 1px solid dodgerblue;
-    
-} */
 .signup .btn{
     width: 100%;
     background: none;
@@ -208,7 +209,7 @@
     margin: 12px 0; 
 
 }
-.signup-cont{
+.signupcont{
         /* line-height: normal; */
         width: 100%;
          overflow: hidden;
@@ -217,12 +218,12 @@
         margin: 8px 0;
         border-bottom: 1px solid #4caf50;
 }
-.signup-cont i{
+.signupcont i{
     width: 26px;
     float: left;
     text-align: center;
 }
- .signup-cont a{
+ .signupcont a{
     text-decoration: none;
     color: lime; 
 }
@@ -322,14 +323,6 @@ color: bisque;
     transform: rotate(25degree);
     transform-origin: center top 0;
     transition: .5s;
-    
-    /* display: grid;
-    flex-direction: column;
-     align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: capacity 0.5s;
-     */
  } 
 .dist-col:hover::before{
     left: 10%;
@@ -364,23 +357,106 @@ color: bisque;
 .card-text{
     text-align: justify;
     }
- /* .image__overlay:hover focus{
-    opacity: 1;
-}
-.image__overlay *{
-    transform: translateY(20px);
-    transition: transform 0.25s;
-}
-.image__overlay:hover focus *{
-    transform: translateY(0);
-} */
-/* #navbarTogglerDemo01 ul{
-    color: white;
-    font-size: 15px;
-}
-.carousel-inner{
-   margin-bottom: 100px; 
-} */ 
+ 
 .card img{
     border-radius: 20px;
 }
+.text1{
+    font-size: 10px;
+    font-weight: 500;
+    margin-bottom: -10px;
+    display: none; 
+    
+}
+.indicator1{
+    height: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    display: none;
+}
+form .indicator1 span{
+    width: 100%;
+    height: 100%;
+    background: lightgray;
+    border-radius: 5px;
+    position: relative;
+}
+form .indicator1 span::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    /* background: #4caf50; */
+}
+/* password */
+
+.showbtn{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+     display: none;   
+}
+form .indicator{
+    height: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    
+    display: none;  
+}
+form .indicator span{
+    width: 100%;
+    height: 100%;
+    background: lightgray;
+    border-radius: 5px;
+    position: relative;
+}
+form .indicator span .medium{
+    margin: 0 3px;
+}
+form .indicator span::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    /* background: #4caf50; */
+}
+form .indicator span.active.weak:before{
+    background: red;
+}
+form .indicator span.active.medium:before{
+    background: orange;
+}
+form .indicator span.active.strong:before{
+    background: green;
+}
+form .text{
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: -10px;
+     display: none; 
+}
+/* form .text.weak{
+    color: red;
+}
+form .text.medium{
+    color: orange;
+}
+form .text.strong{
+    color: green;
+} */
+
+/* password */
