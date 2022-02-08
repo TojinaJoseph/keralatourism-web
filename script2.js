@@ -59,6 +59,11 @@ function validatesignup(){
             
            return false;
         }
+      else if(pass1.value!=pass.value){
+            repasserrp.innerHTML="password doesnt match";
+            passw1.style.borderBottom="1px solid red";        
+         return false;
+        }
         else{ 
          return true;
         }
